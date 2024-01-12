@@ -13,11 +13,11 @@ def generate_points(n, k,radius):
     theta = np.radians(k)
 
     radii = np.linspace(-radius,radius, n)
-    print(radii)
 
-    x = radii * np.cos(theta)
-    y = radii * np.sin(theta)
-
+    x = radii * np.cos(theta)  # List of all points of x-coordinate
+    
+    y = radii * np.sin(theta)  # List of all points of y-coordinate
+ 
     return x, y
 
 
@@ -33,4 +33,5 @@ with open('Output1.txt','w') as f:
     for i in list_points:
         s = "("+str(i[0])+","+str(i[1])+")"
         f.write(s+"\n")
+
 
